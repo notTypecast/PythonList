@@ -48,7 +48,7 @@ public class PythonList implements Iterable<Object> {
 		Integer actualIndex = getActualIndex(i, false);
 		if (actualIndex == null) {
 			throw new IndexError("IndexError: list index out of range");
-		}		
+		}
 		return this.arr.get(actualIndex);
 	}
 	
@@ -87,12 +87,20 @@ public class PythonList implements Iterable<Object> {
 		return slicedList;
 	}
 	
-	public void update(int i, Object x) {
-		this.arr.set(i, x);
+	public void update(int i, Object x) throws IndexError {
+		try {
+			this.arr.set(i, x);
+		} catch (IndexOutOfBoundsException e) {
+			throw new IndexError("IndexError: list assignment index out of range");
+		}
 	}
 	
-	public void delete(int i) {
-		this.arr.remove(i);
+	public void delete(int i) throws IndexError {
+		try {
+			this.arr.remove(i);
+		} catch (IndexOutOfBoundsException e) {
+			throw new IndexError("IndexError: list assignment index out of range");
+		}
 	}
 	
 	public <T> PythonList add(Iterable<T> iterable) {
