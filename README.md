@@ -5,6 +5,7 @@ Python List implementation for Java
 1) `PythonList l = new PythonList();`
 2) `PythonList l = new PythonList("a", 4, new ArrayList<String>(), new PythonList());`
 3) `PythonList l2 = new PythonList(l);`
+
 The first will create a new, empty PythonList. The second will create a new PythonList and add the passed elements to it.
 The third one, assuming `l` is any iterable (including a PythonList), will create a new PythonList and copy all the elements
 of the passed iterable to it.
