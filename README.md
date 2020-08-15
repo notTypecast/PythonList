@@ -53,7 +53,7 @@ strings are sorted alphabetically. Has no return value.
 19) `list.length()` returns the size of the list. Is equivalent to Python's `len(l)`.
 20) `list.max([DoubleFunction<Double> key / ToIntFunction<String> key])` returns the max in `list`. By default, for a list of numbers, the
 largest number will be returned, while for a list of strings, lexicographic ordering is used to determine the output. Just like in `sort`,
-`key` can be provided to change the way in which items are ordered (therefore changing the maximum). Is equinvalent to Python's `max(l)`.
+`key` can be provided to change the way in which items are ordered (therefore changing the maximum). Is equivalent to Python's `max(l)`.
 21) `list.min([DoubleFunction<Double> key / ToIntFunction<String> key])` is the opposite of `max`.
 * Additional methods
 22) `list.iterator()` returns an iterator for the list's items.
