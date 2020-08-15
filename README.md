@@ -14,7 +14,7 @@ of the passed iterable to it.
 to the appropriate type. Is equivalent to Python's `l[i]`.
 2) `list.slice(int start[, int stop[, int step]])` returns a new PythonList object, representing a slice of the initial list.
 `start` represents the initial index and is inclusive. `stop` represents the final index and is exclusive. `step` represents
-the total numbers to be skipped and is 1 by default. Any of the three arguments can be negative. For `start` and `stop`, negative
+the total items to be skipped and is 1 by default. Any of the three arguments can be negative. For `start` and `stop`, negative
 values represent indexes counting backwards (from the end of the list). A negative step simply means to go backwards instead of
 forwards. The method cannot throw any exceptions, but returns an empty list whenever an incorrect slice is passed. Is equivalent
 to Python's `l[start:stop:step]`.
